@@ -1,0 +1,11 @@
+LIBS=../../libcrypto
+
+$RC2COMMON=rc2_ecb.c rc2_skey.c rc2_cbc.c rc2cfb64.c rc2ofb64.c
+
+SOURCE[../../libcrypto]=$RC2COMMON
+
+# When all deprecated symbols are removed, libcrypto doesn't export the
+# RC2 functions, so we must include them directly in liblegacy.a
+IF[{- $disabled{'deprecated-3.0'} -}]
+  SOURCE[../../providers/liblegacy.a]=$RC2COMMON
+ENDIF

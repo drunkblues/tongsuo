@@ -1025,3 +1025,11 @@ auth_sm2		1254
 zuc_128_eia3		1255
 delegation_usage		1256
 hmacWithSM3		1257
+rc2_cbc		1258
+rc2_ecb		1259
+rc2_cfb64		1260
+rc2_ofb64		1261
+rc2_40_cbc		1262
+rc2_64_cbc		1263
+pbe_WithSHA1And128BitRC2_CBC		1264
+pbe_WithSHA1And40BitRC2_CBC		1265
