@@ -1440,11 +1440,13 @@ int SSL_CTX_use_enc_certificate(SSL_CTX *ctx, X509 *x)
         return 0;
     }
 
+    /* do not check key usage
     if (!(X509_get_key_usage(x) & X509v3_KU_KEY_ENCIPHERMENT)
         && !(X509_get_key_usage(x) & X509v3_KU_DATA_ENCIPHERMENT)) {
         ERR_raise(ERR_LIB_SSL, ERR_R_SHOULD_NOT_HAVE_BEEN_CALLED);
         return 0;
     }
+    */
 
     rv = ssl_security_cert(NULL, ctx, x, 0, 1);
     if (rv != 1) {
@@ -1522,12 +1524,14 @@ int SSL_CTX_use_sign_certificate(SSL_CTX *ctx, X509 *x)
         return 0;
     }
 
+    /* do not check key usage
     if (!(X509_get_key_usage(x) & X509v3_KU_DIGITAL_SIGNATURE)
         && !(X509_get_key_usage(x) & X509v3_KU_KEY_CERT_SIGN)
         && !(X509_get_key_usage(x) & X509v3_KU_CRL_SIGN)) {
         ERR_raise(ERR_LIB_SSL, ERR_R_SHOULD_NOT_HAVE_BEEN_CALLED);
         return 0;
     }
+    */
 
     rv = ssl_security_cert(NULL, ctx, x, 0, 1);
     if (rv != 1) {
