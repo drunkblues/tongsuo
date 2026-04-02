@@ -4160,7 +4160,7 @@ const char *ssl_protocol_to_string(int version)
         return "DTLSv1";
 
     case DTLS1_2_VERSION:
-        return "DTLSv1.2";
+        return "DTLSv9.2";
 
 #ifndef OPENSSL_NO_NTLS
     case NTLS1_1_VERSION:

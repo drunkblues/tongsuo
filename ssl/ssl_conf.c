@@ -286,7 +286,7 @@ static int cmd_Protocol(SSL_CONF_CTX *cctx, const char *value)
         SSL_FLAG_TBL_INV("TLSv1.2", SSL_OP_NO_TLSv1_2),
         SSL_FLAG_TBL_INV("TLSv1.3", SSL_OP_NO_TLSv1_3),
         SSL_FLAG_TBL_INV("DTLSv1", SSL_OP_NO_DTLSv1),
-        SSL_FLAG_TBL_INV("DTLSv1.2", SSL_OP_NO_DTLSv1_2)
+        SSL_FLAG_TBL_INV("DTLSv9.2", SSL_OP_NO_DTLSv1_2)
     };
     cctx->tbl = ssl_protocol_list;
     cctx->ntbl = OSSL_NELEM(ssl_protocol_list);
@@ -319,7 +319,7 @@ static int protocol_from_string(const char *value)
         {"TLSv1.2", TLS1_2_VERSION},
         {"TLSv1.3", TLS1_3_VERSION},
         {"DTLSv1", DTLS1_VERSION},
-        {"DTLSv1.2", DTLS1_2_VERSION},
+        {"DTLSv9.2", DTLS1_2_VERSION},
 #ifndef OPENSSL_NO_NTLS
         {"NTLS", NTLS_VERSION},
         {"MIN_VERSION_WITH_NTLS", MIN_VERSION_WITH_NTLS}
