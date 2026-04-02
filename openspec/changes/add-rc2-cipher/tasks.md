@@ -11,7 +11,7 @@
 - [x] 2.2 从 OpenSSL 移植 `rc2_local.h`（内部数据结构和宏定义）
 - [x] 2.3 从 OpenSSL 移植 `rc2_skey.c`（密钥调度函数 `RC2_set_key`）
 - [x] 2.4 从 OpenSSL 移植 `rc2_ecb.c`（ECB 模式封装 `RC2_ecb_encrypt`）
-- [x] 2.5 从 OpenSSL 移植 `rc2_enc.c`（核心加解密 `RC2_encrypt`/`RC2_decrypt`）
+- [x] 2.5 从 OpenSSL 移植 `rc2_cbc.c`（CBC 模式 `RC2_cbc_encrypt` 及核心加解密 `RC2_encrypt`/`RC2_decrypt`）
 - [x] 2.6 从 OpenSSL 移植 `rc2cfb64.c`（CFB 64 位模式 `RC2_cfb64_encrypt`）
 - [x] 2.7 从 OpenSSL 移植 `rc2ofb64.c`（OFB 64 位模式 `RC2_ofb64_encrypt`）
 - [x] 2.8 创建 `crypto/rc2/build.info`，将源文件链接到 `../../libcrypto` 和 `../../providers/liblegacy.a`

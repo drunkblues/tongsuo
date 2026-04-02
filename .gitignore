@@ -57,3 +57,5 @@ dkms.conf
 .opencode/
 .claude/
 .gemini/
+
+tmp*/
